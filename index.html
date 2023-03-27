@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="style.css">
     <title>Law firm</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="header">
             <div class="logo">
                 <a href="javascript:void(0);" class="logo__link">
                     <img src="images/header/logo.svg" alt="igsStudio" class="logo__icon">
@@ -22,16 +23,16 @@
             <nav class="navigation">
                 <ul class="navigation__menu">
                     <li class="navigation__item">
-                        <a href="javascript:void(0);" class="navigation__link">Home</a>
+                        <a href="#header" class="navigation__link">Home</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="javascript:void(0);" class="navigation__link">Attorneys</a>
+                        <a href="#introduce" class="navigation__link">Attorneys</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="javascript:void(0);" class="navigation__link">Practice Areas</a>
+                        <a href="#practice" class="navigation__link">Practice Areas</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="javascript:void(0);" class="navigation__link">About Us</a>
+                        <a href="#team" class="navigation__link">About Us</a>
                     </li>
                 </ul>
             </nav>
@@ -75,7 +76,7 @@
                     <img src="images/greeting/Man.png" alt="man" class="greeting__image" />
                 </picture>
             </section>
-            <section class="introduce">
+            <section class="introduce" id="introduce">
                 <h2 class="introduce__title title">Let’s Introduce
                     Ourself</h2>
                 <div class="introduce__info">
@@ -120,7 +121,7 @@
                     </article>
                 </div>
             </section>
-            <section class="practices">
+            <section class="practices" id="practice">
                 <h2 class="practices__title title">
                     Area of Practices
                 </h2>
@@ -200,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="review__list">
+                <div class="review__list js-slider">
                     <article class="review__item">
                         <picture class="review__picture">
                             <img src="/images/review/Jane.png" alt="Jane" class="review__image">
@@ -242,7 +243,7 @@
 
             </section>
 
-            <section class="team">
+            <section class="team" id="team">
                 <h2 class="team__title title">Our Team</h2>
                 <ul class="team__list">
                     <li class="team__item">
@@ -318,14 +319,22 @@
                         aliqua dolor do amet sint.
                     </p>
 
-                    <div class="faq__accordion">
-                        <h4 class="faq__question">Do I need a personal injury report?</h4>
+                    <div class="faq__accordion accordion">
+                        <div class="accordion__title">
+                            <h4 class="faq__question">Do I need a personal injury report?</h4>
+                            <button class="faq__button"></button>
+                        </div>
+
                         <p class="faq__ask">Amet minim mollit non deserunt ullamco est sit
                             aliqua dolor do amet sint. Velit officia consequatduis
                             enim velit mollit Exer. Amet minim mollit non deserunt
                             ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit
                             Exer.</p>
-                        <h4 class="faq__question">How much is my case worth?</h4>
+
+                        <div class="accordion__title">
+                            <h4 class="faq__question">How much is my case worth?</h4>
+                            <button class="faq__button"></button>
+                        </div>
                         <p class="faq__ask">Amet minim mollit non deserunt ullamco est sit
                             aliqua dolor do amet sint. Velit officia consequatduis
                             enim velit mollit Exer. Amet minim mollit non deserunt
@@ -333,14 +342,21 @@
                             Exer.
                         </p>
 
-                        <h4 class="faq__question">What should I do right after car accidect</h4>
+                        <div class="accordion__title">
+                            <h4 class="faq__question">What should I do right after car accidect</h4>
+                            <button class="faq__button"></button>
+                        </div>
                         <p class="faq__ask">Amet minim mollit non deserunt ullamco est sit
                             aliqua dolor do amet sint. Velit officia consequatduis
                             enim velit mollit Exer. Amet minim mollit non deserunt
                             ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit
                             Exer.</p>
 
-                        <h4 class="faq__question">How much is my case worth?</h4>
+
+                        <div class="accordion__title">
+                            <h4 class="faq__question">How much is my case worth?</h4>
+                            <button class="faq__button"></button>
+                        </div>
                         <p class="faq__ask">Amet minim mollit non deserunt ullamco est sit
                             aliqua dolor do amet sint. Velit officia consequatduis
                             enim velit mollit Exer. Amet minim mollit non deserunt
@@ -378,16 +394,16 @@
                 <nav class="navigation--footer">
                     <ul class="navigation__menu">
                         <li class="navigation__item--footer">
-                            <a href="javascript:void(0);" class="navigation__link">Home</a>
+                            <a href="#header" class="navigation__link">Home</a>
                         </li>
                         <li class="navigation__item--footer">
-                            <a href="javascript:void(0);" class="navigation__link">Attorneys</a>
+                            <a href="#introduce" class="navigation__link">Attorneys</a>
                         </li>
                         <li class="navigation__item--footer">
-                            <a href="javascript:void(0);" class="navigation__link">Practice Areas</a>
+                            <a href="#practice" class="navigation__link">Practice Areas</a>
                         </li>
                         <li class="navigation__item--footer">
-                            <a href="javascript:void(0);" class="navigation__link">About Us</a>
+                            <a href="#team" class="navigation__link">About Us</a>
                         </li>
                     </ul>
                 </nav>
@@ -423,6 +439,12 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
     <script src="script.js"></script>
 </body>
 

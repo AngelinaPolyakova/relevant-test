@@ -17,6 +17,7 @@ html {
   font-family: "InterSemiBold", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -169,7 +170,7 @@ body {
 .greeting__submit {
   font-family: "InterSemiBold", sans-serif;
   color: #000;
-  background-color: #E3B748;
+  background-color: #e3b748;
   border: none;
   padding: 18px 33px;
   border-radius: 43px;
@@ -266,7 +267,7 @@ body {
   line-height: 23px;
   color: #000;
   text-decoration: none;
-  background-color: #E3B748;
+  background-color: #e3b748;
   padding: 10px 24px;
   border-radius: 24px;
   transition: opacity 300ms;
@@ -311,7 +312,7 @@ body {
 .practices__name {
   font-size: 24px;
   line-height: 24px;
-  color: #FFFBF2;
+  color: #fffbf2;
   white-space: nowrap;
   position: absolute;
   bottom: 0;
@@ -355,8 +356,7 @@ body {
   padding: 36px 26px;
   border: 1.4px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
-  width: 30%;
-  flex-grow: 1;
+  width: 19vw;
   position: relative;
 }
 .review__item::after {
@@ -433,7 +433,7 @@ body {
   transition: background-color 300ms;
 }
 .arrow:hover {
-  background-color: #E3B748;
+  background-color: #e3b748;
   transition: background-color 300ms;
   cursor: pointer;
 }
@@ -464,8 +464,11 @@ body {
   transition: background-color 0.3s;
 }
 .team__item:hover {
-  background-color: #E3B748;
+  background-color: #e3b748;
   transition: background-color 0.3s;
+}
+.team__item:hover > a {
+  color: #373737;
 }
 .team__link {
   display: flex;
@@ -522,6 +525,41 @@ body {
 .faq__ask {
   border-bottom: 2px solid rgba(255, 255, 255, 0.05);
   padding-bottom: 40px;
+  height: auto !important;
+}
+.faq__button {
+  border: none;
+  width: 28px;
+  height: 28px;
+  background-color: #e3b748;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 55px;
+}
+.faq__button::after {
+  content: "";
+  width: 2px;
+  height: 8px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.faq__button::before {
+  content: "";
+  width: 2px;
+  height: 8px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion__title {
+  position: relative;
 }
 
 .subscribe {
@@ -561,7 +599,7 @@ body {
 .subscribe__button {
   font-size: 14px;
   line-height: 19px;
-  background-color: #E3B748;
+  background-color: #e3b748;
   font-weight: 700;
   padding: 13px 20px;
   border-radius: 0 8px 8px 0;
@@ -683,8 +721,21 @@ body {
   .practices__item--long {
     width: 100%;
   }
-  .review, .team, .faq, .subscribe, .footer {
+  .review,
+  .team,
+  .faq,
+  .subscribe,
+  .footer {
     padding: 30px 15px 50px;
+  }
+  .review__item {
+    width: calc(100vw - 30px);
+  }
+  .faq__button {
+    right: 0;
+  }
+  .slick-slide {
+    width: 50vw;
   }
   .subscribe__wrapper {
     padding: 15px 10px;
@@ -746,12 +797,24 @@ body {
   .introduce__info {
     padding-top: 36px;
   }
-  .practices, .review, .team, .faq, .subscribe, .footer {
+  .practices,
+  .review,
+  .team,
+  .faq,
+  .subscribe,
+  .footer {
     padding: 15px 70px 100px;
+  }
+  .slick-slide {
+    width: 50vw;
+  }
+  .slick-slider {
+    width: calc(100vw - 140px) !important;
   }
 }
 @media (min-width: 320px) and (max-width: 1279px) {
-  .navigation, .callback {
+  .navigation,
+  .callback {
     display: none;
   }
   .navigation {
@@ -844,10 +907,25 @@ body {
     margin: 0 auto;
     padding-top: 36px;
   }
-  .review__item, .team__item {
+  .team__item {
     width: 100%;
   }
   .faq__wrapper {
     flex-direction: column;
   }
+}
+@media (min-width: 1280px) {
+  .slick-slider {
+    width: calc(100vw - 300px) !important;
+  }
+}
+.slick-active {
+  background-color: #2e2e2e;
+}
+.slick-active::after {
+  display: none;
+}
+
+.slick-slide {
+  margin-right: 30px;
 }/*# sourceMappingURL=style.css.map */
